@@ -46,6 +46,21 @@
       justify-content: center;
       gap: 20px;
     }
+    .testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+}
+.testimonial-grid img {
+  width: 100%;
+  max-width: 150px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
     .card {
       background: white;
       border-radius: 10px;
@@ -103,11 +118,7 @@
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.08); }
-  100% { transform: scale(1); }
-}
+    
 .wa-button {
   animation: pulse 1.5s infinite;
 }
@@ -126,20 +137,7 @@
     .wa-button:hover {
       background-color: #128C7E;
     }
-    .testimonial-slider {
-  width: 50%;
-  max-width: 600px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
-}
+    
 .faq {
   max-width: 800px;
   margin: 0 auto;
@@ -234,7 +232,7 @@
         <h3>LOWONGAN PEKERJAAN!</h3>
         
 <p>Mau income 200RB - 500RB/ hari? bisa banget dong </p>
-<p> ‎ </p>
+
 <p>BISNIS INI SANGAT COCOK</p>
 UNTUK :
 <p>👉🏻 IRT</p>
@@ -242,16 +240,16 @@ UNTUK :
 <p>👉🏻 MAHASISWA KULIAH </p>
 <p>👉🏻 KARYAWAN</p> 
 <p>👉🏻 PENGANGGURAN</p> 
-<p>        ‎ ‎ ‎ </p>
+
 ⚠️ BIG PROMO HANYA UTK 10 ORANG PERTAMA
  ⚠️PENGHASILAN MINIMAL 200K - 500K/HARI
-<p> ‎ </p>
+
 <p>kamu mau kan biar ATM gendut?! YUK JOIN DI @bisnispelajar.eiraa</p>
-<p> ‎ ‎ </p>
+
 <p>❌ NO MLM</p>
 <p>❌ NO JUDI</p>
 <p>❌ NO MONEY GAMES</p>
-<p>✅️ 100% HALAL </p>
+<p>✅️ 100% HALA </p>
     
        
     </div>
@@ -282,17 +280,14 @@ UNTUK :
 
   <section>
   <h2 class="section-title">Testimoni</h2>
-  <div class="testimonial-slider">
-    <div class="slides">
-      <img src="testi1.jpg" alt="Testimoni 1">
-      <img src="testi2.jpg" alt="Testimoni 2">
-      <img src="testi3.jpg" alt="Testimoni 3">
-      <img src="testi4.jpg" alt="Testimoni 4">
-      <img src="testi5.jpg" alt="Testimoni 5">
-      <img src="testi6.jpg" alt="Testimoni 6">
-      <img src="testi7.jpg" alt="Testimoni 7">
-      <img src="testi8.jpg" alt="Testimoni 8">
-    </div>
+  <div class="testimonial-grid">
+    <img src="testi1.jpg" alt="Testimoni 1">
+    <img src="testi2.jpg" alt="Testimoni 2">
+    <img src="testi3.jpg" alt="Testimoni 3">
+    <img src="testi4.jpg" alt="Testimoni 4">
+    <img src="testi5.jpg" alt="Testimoni 5">
+    <img src="testim6.jpg" alt="Testimoni 6">
+    -
   </div>
 </section>
 
@@ -401,17 +396,7 @@ UNTUK :
     
 
   </footer>
-  <script>
-  let currentIndex = 0;
-  const slides = document.querySelector('.slides');
-  const totalSlides = slides.children.length;
-
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % totalSlides;
-     slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }, 1100); // ganti gambar setiap 3 detik
-</script>
-
+   
 <script>
   const faqItems = document.querySelectorAll('.faq-item');
 
